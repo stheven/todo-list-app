@@ -1,0 +1,13 @@
+.todo-list{
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 40px;
+  border: 1px solid #dadada;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.todo-list input{
+  display: block;
+}

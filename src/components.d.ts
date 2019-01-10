@@ -28,6 +28,9 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface TodoList {}
+  interface TodoListAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
@@ -35,12 +38,14 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'TodoList': Components.TodoList;
   }
 
   interface StencilIntrinsicElements {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'todo-list': Components.TodoListAttributes;
   }
 
 
@@ -62,16 +67,24 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLTodoListElement extends Components.TodoList, HTMLStencilElement {}
+  var HTMLTodoListElement: {
+    prototype: HTMLTodoListElement;
+    new (): HTMLTodoListElement;
+  };
+
   interface HTMLElementTagNameMap {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'todo-list': HTMLTodoListElement
   }
 
   interface ElementTagNameMap {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'todo-list': HTMLTodoListElement;
   }
 
 
